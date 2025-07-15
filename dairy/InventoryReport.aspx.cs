@@ -6,18 +6,32 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace dairy
 {
     public partial class InventoryReport : System.Web.UI.Page
     {
         dairy.Inventory inventory = new dairy.Inventory();
+        SqlConnection conn= new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pc\Desktop\emaule\New folder\dairy-farm\dairy\dairy\App_Data\DairyFarmNaiposha.mdf"";Integrated Security=True");
+
         protected void Page_Load(object sender, EventArgs e)
         {
-        
-            DataTable table = inventory.viewInventory();
-            gridInventory.DataSource = table;
-            gridInventory.DataBind();
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+                DataTable table = inventory.viewInventory();
+                DataTable dt = inventory.viewTotal();
+                GridTotal.DataSource = dt;
+                GridTotal.DataBind();
+                gridInventory.DataSource = table;
+                gridInventory.DataBind();
+                Page.Response.Write(inventory.getResponse());
+            }
+            else
+            {
+                conn.Close();
+            }
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)

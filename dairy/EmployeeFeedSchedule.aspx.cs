@@ -6,13 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Configuration;
 namespace dairy
 {
     public partial class EmployeeFeedSchedule : System.Web.UI.Page
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pc\Desktop\emaule\New folder\dairy-farm\dairy\dairy\App_Data\DairyFarmNaiposha.mdf"";Integrated Security=True");
-
+        public static string strcon = ConfigurationManager.ConnectionStrings["ConnectString"].ConnectionString;
+        SqlConnection conn = new SqlConnection(strcon);
         protected void Page_Load(object sender, EventArgs e)
         {
             if (conn.State == ConnectionState.Closed)

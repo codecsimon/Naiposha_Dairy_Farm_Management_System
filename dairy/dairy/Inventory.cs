@@ -94,6 +94,25 @@ namespace dairy.dairy
                 return new DataTable();
             }         
         }
+        public DataTable viewTotal()
+        {
+            try
+            {
+                this.startConnection();
+                SqlCommand cmd = new SqlCommand("SELECT SUM(Total_Cost) AS total from General_Inventory", conn);
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter sa = new SqlDataAdapter(cmd);
+                sa.Fill(dt);
+                setResponse("Records Retrieved succesfully!");
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                setResponse(ex.Message);
+                return new DataTable();
+            }
+        }
         public DataTable Add_item(dairy.Inventory inventory)
         {
             try

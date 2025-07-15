@@ -54,15 +54,7 @@
     .card p {
       color: #555;
     }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
+   
   </style>
 </head>
 <body>
@@ -81,7 +73,13 @@
             <h3>Full inventory</h3>
             <asp:TextBox runat="server" ID="txt_search"></asp:TextBox>
             <asp:Button runat="server" ID="btnSearch" Text="Search" OnClick="btnSearch_Click"/>
-            <asp:GridView runat="server" ID="gridInventory"></asp:GridView>
+            <asp:GridView runat="server" ID="gridInventory">
+                
+            </asp:GridView>
+            <asp:Label ID="reportIn" Text="0" runat="server" ></asp:Label>
+            <asp:GridView runat="server" ID="GridTotal">
+                
+            </asp:GridView>
             <div>
                 <asp:Button runat="server" ID="btnAdd" Text="Add Items" OnClick="btnAdd_Click"/>
                 <asp:Button runat="server" ID="btnUpdate" Text="Update Items" OnClick="btnUpdate_Click"/>

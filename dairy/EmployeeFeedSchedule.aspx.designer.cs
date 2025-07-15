@@ -24,6 +24,15 @@ namespace dairy
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// notify control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label notify;
+
+        /// <summary>
         /// feed control.
         /// </summary>
         /// <remarks>

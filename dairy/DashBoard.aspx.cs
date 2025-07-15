@@ -23,6 +23,7 @@ namespace dairy
                 conn.Close();
             }
             notify.Text = no_notifications().ToString();
+            notify.ForeColor = System.Drawing.Color.Red;
 
         }
         public int no_notifications ()
@@ -33,7 +34,7 @@ namespace dairy
                 string statuscode = "active";
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = " select count(*) from Sick_Report where Status=@status";
+                cmd.CommandText = " select * from Sick_Report where Status=@status";
                 cmd.Parameters.AddWithValue("status",statuscode);
                 cmd.ExecuteNonQuery();
 

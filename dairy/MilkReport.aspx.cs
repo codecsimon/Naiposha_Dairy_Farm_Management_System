@@ -19,7 +19,10 @@ namespace dairy
 
             {
                 conn.Open();
-                viewMILK();
+                
+                    grid_milk.DataSource = viewMILK();
+                    grid_milk.DataBind();
+                
             }
             else
             {

@@ -54,15 +54,7 @@
     .card p {
       color: #555;
     }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
+    
   </style>
 </head>
 <body>
@@ -79,7 +71,7 @@
     <form id="form1" runat="server">
         <h3>Set Feeding Schedule</h3>
         <div class="search-bar">
-      <input type="text" placeholder="Search feeding schedule..." runat="server" id="txt_search"/>
+      <input type="text" placeholder="Search Inventory..." runat="server" id="txt_search"/>
             <asp:Button ID="search" runat="server" Text="Search" OnClick="search_Click" />
     </div>
         <br /><br />

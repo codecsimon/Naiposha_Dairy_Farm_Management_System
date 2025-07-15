@@ -51,6 +51,24 @@ namespace dairy
         protected global::System.Web.UI.WebControls.GridView gridInventory;
 
         /// <summary>
+        /// reportIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label reportIn;
+
+        /// <summary>
+        /// GridTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridTotal;
+
+        /// <summary>
         /// btnAdd control.
         /// </summary>
         /// <remarks>

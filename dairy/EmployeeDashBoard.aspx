@@ -72,11 +72,10 @@
                  <header>
     <div class="logo">Naiposha Farm DFMS</div>
     <nav>
-      <a href="Dashboard.aspx">Dashboard</a>
+      <a href="EmployeeDashBoard.aspx">Notifications</a>
       <a href="MilkRecord.aspx">Milk Records</a>
-      <a href="Feeding.aspx">Feeding</a>
-      <a href="Inventory.aspx">Inventory</a>
-      <a href="login.aspx">Logout</a>
+      <a href="EmployeeFeedingSchedule.aspx">Feeding Schedule</a>
+      <a href="EmployeeLogin.aspx">Logout</a>
     </nav>
   </header>
 
@@ -84,12 +83,16 @@
     <h2>Welcome to Your Dashboard</h2>
     <div class="card-grid">
       <div class="card">
-        <a href="CowDashboard.aspx">Milk Production</a>
+        <a href="MilkRecord.aspx">Milk Production</a>
         <p>View and manage daily milk production data.</p>
       </div>
          <div class="card">
         <a href="EmployeeFeedSchedule.aspx">Feeding Schedule</a>
         <p>View the feeding schedule.</p>
+      </div>
+        <div class="card">
+        <a href="SickReport.aspx">Report Sick Animal</a>
+        <p>Report any cases of sick animals in the farm.</p>
       </div>
       
     </div>
