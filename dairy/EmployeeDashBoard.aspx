@@ -87,6 +87,10 @@
         <a href="CowDashboard.aspx">Milk Production</a>
         <p>View and manage daily milk production data.</p>
       </div>
+         <div class="card">
+        <a href="EmployeeFeedSchedule.aspx">Feeding Schedule</a>
+        <p>View the feeding schedule.</p>
+      </div>
       
     </div>
   </div>

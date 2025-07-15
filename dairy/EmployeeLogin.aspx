@@ -63,6 +63,9 @@
       bottom: 0;
       width: 100%;
     }
+    .textbox{
+    height:25px;
+    }
         </style>
 </head>
 <body>
@@ -77,23 +80,30 @@
     </nav>
   </header>
     <h3>Employee Login</h3>
-    <form id="form1" runat="server">
-        <div>
+    <form id="form1" runat="server" >
+        <center>
+        <div style="border-style:solid; border-width:1px; border-radius:5px">
+            <h3>Employee Login</h3>
              <asp:Label ID="Lid" Text="ID Number" runat="server"></asp:Label><br />
-            <asp:TextBox ID="eid" runat="server" TextMode="Number" ValidateRequestMode="Enabled"></asp:TextBox>
-             <asp:RequiredFieldValidator ID="IDValidator" runat="server" ControlToValidate="eid" Display="Dynamic" ErrorMessage="ID number is required!" ForeColor="Red" SetFocusOnError="True" ValidationGroup="vg">*</asp:RequiredFieldValidator>
+            <asp:TextBox ID="eid" runat="server" TextMode="Number" CssClass="textbox" ValidateRequestMode="Enabled"></asp:TextBox>
+             <br />
+             <asp:RequiredFieldValidator ID="IDValidator" runat="server" ControlToValidate="eid" Display="Dynamic" ErrorMessage="ID number is required!" ForeColor="Red" SetFocusOnError="True" ValidationGroup="vg" Font-Size="11pt">*ID number is required!</asp:RequiredFieldValidator>
              <br />
 
             <asp:Label ID="Lpass" Text="Password" runat="server"></asp:Label><br />
-            <asp:TextBox ID="Epass" runat="server" TextMode="Password" ValidateRequestMode="Enabled"></asp:TextBox>
-             <asp:RequiredFieldValidator ID="PasswordValidator" runat="server" ControlToValidate="Epass" Display="Dynamic" ErrorMessage="Password is required!" ForeColor="Red" SetFocusOnError="True" ValidationGroup="vg">*</asp:RequiredFieldValidator>
-             <asp:ValidationSummary ID="TSummary" runat="server" ForeColor="Red" ValidationGroup="vg" />
+            <asp:TextBox ID="Epass" runat="server" TextMode="Password" CssClass="textbox" ValidateRequestMode="Enabled"></asp:TextBox>
              <br />
-
+             <asp:RequiredFieldValidator ID="PasswordValidator" runat="server" ControlToValidate="Epass" Display="Dynamic" ErrorMessage="Password is required!" ForeColor="Red" SetFocusOnError="True" ValidationGroup="vg" Font-Size="11pt">*Password is required!</asp:RequiredFieldValidator>
+             <br />
+            <br />
+            <asp:Button ID="eLogin" Text="Login" runat="server" OnClick="eLogin_Click" ValidationGroup="vg" CssClass="textbox"/><br />
+            <br />
+            <br />
+            <a href="EmployeeRegistration.aspx">No ACCOUNT!! Register</a>
+        
         </div>
+        </center>
 
-        <asp:Button ID="eLogin" Text="Login" runat="server" OnClick="eLogin_Click" ValidationGroup="vg" /><br />
-        <a href="EmployeeRegistration.aspx">No ACCOUNT!! Register</a>
         
         <footer>
          <p>&copy; 2025 Naiposha Farm. All rights reserved.</p>

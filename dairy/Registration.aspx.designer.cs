@@ -24,15 +24,6 @@ namespace dairy
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// nameValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameValidator;
-
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -51,22 +42,13 @@ namespace dairy
         protected global::System.Web.UI.WebControls.TextBox fName;
 
         /// <summary>
-        /// emailValidator control.
+        /// nameValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator emailValidator;
-
-        /// <summary>
-        /// EmailValid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailValid;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameValidator;
 
         /// <summary>
         /// Label2 control.
@@ -87,22 +69,22 @@ namespace dairy
         protected global::System.Web.UI.WebControls.TextBox fEmail;
 
         /// <summary>
-        /// phoneValidator control.
+        /// emailValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator phoneValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator emailValidator;
 
         /// <summary>
-        /// phoneValid control.
+        /// EmailValid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator phoneValid;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailValid;
 
         /// <summary>
         /// Label3 control.
@@ -123,13 +105,22 @@ namespace dairy
         protected global::System.Web.UI.WebControls.TextBox fPhone;
 
         /// <summary>
-        /// addressValidator control.
+        /// phoneValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator addressValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator phoneValidator;
+
+        /// <summary>
+        /// phoneValid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator phoneValid;
 
         /// <summary>
         /// Label4 control.
@@ -150,22 +141,13 @@ namespace dairy
         protected global::System.Web.UI.WebControls.TextBox fAddress;
 
         /// <summary>
-        /// passwordValidator control.
+        /// addressValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator passwordValidator;
-
-        /// <summary>
-        /// lengthValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator lengthValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator addressValidator;
 
         /// <summary>
         /// Label5 control.
@@ -186,22 +168,22 @@ namespace dairy
         protected global::System.Web.UI.WebControls.TextBox fPassword;
 
         /// <summary>
-        /// RequiredFieldValidator6 control.
+        /// passwordValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator passwordValidator;
 
         /// <summary>
-        /// ComparePass control.
+        /// lengthValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator ComparePass;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator lengthValidator;
 
         /// <summary>
         /// Label6 control.
@@ -222,6 +204,24 @@ namespace dairy
         protected global::System.Web.UI.WebControls.TextBox fCoPassword;
 
         /// <summary>
+        /// RequiredFieldValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
+
+        /// <summary>
+        /// ComparePass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator ComparePass;
+
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
@@ -229,14 +229,5 @@ namespace dairy
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-
-        /// <summary>
-        /// ValidationSummary control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary;
     }
 }

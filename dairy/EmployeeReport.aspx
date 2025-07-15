@@ -63,6 +63,7 @@
       bottom: 0;
       width: 100%;
     }
+        </style>
 </head>
 <body>
     <header>

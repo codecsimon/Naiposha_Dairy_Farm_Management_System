@@ -76,10 +76,12 @@
     <Content Include="CowRegister.aspx" />
     <Content Include="DashBoard.aspx" />
     <Content Include="EmployeeDashBoard.aspx" />
+    <Content Include="EmployeeFeedSchedule.aspx" />
     <Content Include="EmployeeLogin.aspx" />
     <Content Include="EmployeeRegistration.aspx" />
     <Content Include="EmployeeReport.aspx" />
     <Content Include="Farm.jpeg" />
+    <Content Include="FarmSickReport.aspx" />
     <Content Include="Feeding.aspx" />
     <Content Include="FeedReport.aspx" />
     <Content Include="Index.aspx" />
@@ -89,6 +91,10 @@
     <Content Include="MilkRecord.aspx" />
     <Content Include="MilkReport.aspx" />
     <Content Include="Registration.aspx" />
+    <Content Include="Reports.aspx" />
+    <Content Include="SalaryReport.aspx" />
+    <Content Include="SickReport.aspx" />
+    <Content Include="TotalMilkReportPerCow.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +126,7 @@
     <Compile Include="dairy\Feeds.cs" />
     <Compile Include="dairy\Inventory.cs" />
     <Compile Include="dairy\MilkRecord.cs" />
+    <Compile Include="dairy\SickReport.cs" />
     <Compile Include="DashBoard.aspx.cs">
       <DependentUpon>DashBoard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,6 +140,13 @@
     </Compile>
     <Compile Include="EmployeeDashBoard.aspx.designer.cs">
       <DependentUpon>EmployeeDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeFeedSchedule.aspx.cs">
+      <DependentUpon>EmployeeFeedSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeFeedSchedule.aspx.designer.cs">
+      <DependentUpon>EmployeeFeedSchedule.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmployeeLogin.aspx.cs">
       <DependentUpon>EmployeeLogin.aspx</DependentUpon>
@@ -154,6 +168,13 @@
     </Compile>
     <Compile Include="EmployeeReport.aspx.designer.cs">
       <DependentUpon>EmployeeReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FarmSickReport.aspx.cs">
+      <DependentUpon>FarmSickReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FarmSickReport.aspx.designer.cs">
+      <DependentUpon>FarmSickReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Feeding.aspx.cs">
       <DependentUpon>Feeding.aspx</DependentUpon>
@@ -218,6 +239,34 @@
     </Compile>
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalaryReport.aspx.cs">
+      <DependentUpon>SalaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalaryReport.aspx.designer.cs">
+      <DependentUpon>SalaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SickReport.aspx.cs">
+      <DependentUpon>SickReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SickReport.aspx.designer.cs">
+      <DependentUpon>SickReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TotalMilkReportPerCow.aspx.cs">
+      <DependentUpon>TotalMilkReportPerCow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TotalMilkReportPerCow.aspx.designer.cs">
+      <DependentUpon>TotalMilkReportPerCow.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

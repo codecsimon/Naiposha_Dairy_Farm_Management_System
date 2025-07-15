@@ -1,4 +1,4 @@
-﻿2<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="dairy.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="dairy.Index" %>
 
 <!DOCTYPE html>
 
@@ -85,7 +85,7 @@
     </header>
     <section class="hero">
         <p>Real Farm Freshness that Purifies the Body</p>
-        <a href="#" class="explore-btn">Explore</a>
+        <a href="ContactUs.aspx" class="explore-btn">Welcome to Our Farm</a>
     </section>
     <footer>
         <p>&copy; 2025 Naiposha Farm. All rights reserved.</p>

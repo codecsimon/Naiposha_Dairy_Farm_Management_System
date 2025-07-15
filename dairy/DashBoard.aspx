@@ -70,7 +70,7 @@
           <header>
     <div class="logo">Naiposha Farm DFMS</div>
     <nav>
-      <a href="Dashboard.aspx">Dashboard</a>
+      <a href="FarmSickReport.aspx">Notifications <asp:Label ID="notify" runat="server" Text="0"></asp:Label></a>
       <a href="MilkRecord.aspx">Milk Records</a>
       <a href="Feeding.aspx">Feeding</a>
       <a href="Inventory.aspx">Inventory</a>
@@ -94,7 +94,7 @@
         <p>Monitor feed stock, supplements, and equipment.</p>
       </div>
       <div class="card">
-        <a href="EmployeeReport.aspx">Reports</a>
+        <a href="Reports.aspx">Reports</a>
         <p>Generate production and performance reports.</p>
       </div>
     </div>

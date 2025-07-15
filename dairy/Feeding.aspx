@@ -66,14 +66,25 @@
   </style>
 </head>
 <body>
+    <header>
+    <div class="logo">Naiposha Farm DFMS</div>
+    <nav>
+      <a href="Dashboard.aspx">Dashboard</a>
+      <a href="MilkRecord.aspx">Milk Records</a>
+      <a href="Feeding.aspx">Feeding</a>
+      <a href="Inventory.aspx">Inventory</a>
+      <a href="login.aspx">Logout</a>
+    </nav>
+        </header>
     <form id="form1" runat="server">
         <h3>Set Feeding Schedule</h3>
         <div class="search-bar">
       <input type="text" placeholder="Search feeding schedule..." runat="server" id="txt_search"/>
             <asp:Button ID="search" runat="server" Text="Search" OnClick="search_Click" />
     </div>
+        <br /><br />
      <asp:GridView runat="server" ID="gridInventory"> </asp:GridView> 
-
+    <br />
 
     <div class="button-group">
       <asp:Button ID="btn_save" runat="server" Text="Save"/>
@@ -81,8 +92,10 @@
       <asp:Button ID="btn_delete" runat="server" Text="Delete"/>
       <asp:Button ID="btn_view" runat="server" Text="View"/>
     </div>
+        <br />
         <asp:Button ID="btn_add" runat="server" Text="Add" OnClick="btn_add_Click"/>
-    <asp:Table runat="server" ID="schedule" BorderWidth="5px" GridLines="Both">
+    <br /><br />
+        <asp:Table runat="server" ID="schedule" BorderWidth="5px" GridLines="Both">
         <asp:TableHeaderRow>
             <asp:TableHeaderCell Text="CowID"></asp:TableHeaderCell>
             <asp:TableHeaderCell Text="Feed"></asp:TableHeaderCell>
@@ -90,47 +103,32 @@
             <asp:TableHeaderCell Text="Time"></asp:TableHeaderCell>
         </asp:TableHeaderRow>
         <asp:TableRow>
-            <asp:TableCell><asp:TextBox runat="server" ID="txt_cowid"></asp:TextBox> </asp:TableCell>
-            <asp:TableCell><asp:TextBox runat="server" ID="txt_Feed"></asp:TextBox> </asp:TableCell>
-            <asp:TableCell><asp:TextBox runat="server" ID="txt_quantity"></asp:TextBox> </asp:TableCell>
-             <asp:TableCell><asp:DropDownlist runat="server" ID="ddl_time">
-                   <asp:ListItem>Morning</asp:ListItem>
-                   <asp:ListItem>Afternoon</asp:ListItem>
-                   <asp:ListItem>Evenning</asp:ListItem>
+            <asp:TableCell>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter the name of the cow" ControlToValidate="txt_cowid" Text="*" ValidationGroup="vg" SetFocusOnError="True" Display="Dynamic"></asp:RequiredFieldValidator>
+                <asp:TextBox runat="server" ID="txt_cowid"></asp:TextBox> </asp:TableCell>
+            <asp:TableCell>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter the feed name" ControlToValidate="txt_feed" SetFocusOnError="True" ValidationGroup="vg" Text="*" Display="Dynamic"></asp:RequiredFieldValidator>
+                <asp:TextBox runat="server" ID="txt_Feed"></asp:TextBox> </asp:TableCell>
+            <asp:TableCell>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please enter the quantity of feed for the cow" SetFocusOnError="True" ControlToValidate="txt_quantity" ValidationGroup="vg" Text="*"></asp:RequiredFieldValidator>
+                <asp:TextBox runat="server" ID="txt_quantity"></asp:TextBox> </asp:TableCell>
+             <asp:TableCell>
+                 
+                 <asp:DropDownlist runat="server" ID="ddl_time">
+                    <asp:ListItem Value="select" Text="Select"></asp:ListItem>
+                   <asp:ListItem Value="Morning" Text="Morning"></asp:ListItem>
+                   <asp:ListItem Value="Afternoon" Text="Afternoon"></asp:ListItem>
+                   <asp:ListItem Value="Evenning" Text="Evenning">Evenning</asp:ListItem>
                             </asp:DropDownlist> </asp:TableCell>
         </asp:TableRow>
         
     </asp:Table>
-    <asp:Button Text="Create Schedule" ID="btn_schedule" runat="server" OnClick="btn_schedule_Click" style="height: 26px"/>
-
+        <br /><br />
+    <asp:Button Text="Create Schedule" ID="btn_schedule" runat="server" OnClick="btn_schedule_Click" style="height: 26px" ValidationGroup="vg"/>
+        <br />
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="vg" ForeColor="Red" />
         <asp:GridView runat="server" ID="gridSchedule"></asp:GridView>
-    <table>
-      <thead>
-        <tr>
-          <th>Cow ID</th>
-          <th>Feed Type</th>
-          <th>Feed Quantity (Kg)</th>
-          <th>Feeding Time</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Cow-001</td>
-          <td>Silage</td>
-          <td>5</td>
-          <td>Morning</td>
-          <td>2025-06-20</td>
-        </tr>
-        <tr>
-          <td>Cow-002</td>
-          <td>Napier Grass</td>
-          <td>4</td>
-          <td>Evening</td>
-          <td>2025-06-20</td>
-        </tr>
-      </tbody>
-    </table>
+    
   </div>
 
   <footer>

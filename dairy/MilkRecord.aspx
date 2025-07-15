@@ -63,6 +63,15 @@
       bottom: 0;
       width: 100%;
     }
+    .textBox{
+        height:20px;
+    }
+    .button
+    {
+        width:100px;
+        height:25px;
+        color:black;
+    }
   </style>
 </head>
 <body>
@@ -79,21 +88,40 @@
     <h3>Record MiLK</h3>
     <form id="form1" runat="server">
    <div>
-       <asp:Label Text="CowID" runat="server"></asp:Label>
-       <asp:TextBox ID="txt_cowid" runat="server"></asp:TextBox><br />
-
-       <asp:Label Text="MilkQuantity" runat="server"></asp:Label>
-       <asp:TextBox ID="txt_milkquantity" runat="server" TextMode="Number"></asp:TextBox><br />
-
-       <asp:DropDownList runat="server" ID="ddl_List">
-           <asp:ListItem>Morning</asp:ListItem>
-           <asp:ListItem>Afternoon</asp:ListItem>
-           <asp:ListItem>Evenning</asp:ListItem>
+       <asp:Table runat="server" ID="cowMilk" GridLines="Both" Border="1" CellSpacing="20" >
+           <asp:TableHeaderRow >
+               <asp:TableHeaderCell Text="COW ID"></asp:TableHeaderCell>
+               <asp:TableHeaderCell Text="Milk Quantity"></asp:TableHeaderCell>
+               <asp:TableHeaderCell Text="Milking Time"></asp:TableHeaderCell>
+           </asp:TableHeaderRow>
+           <asp:TableRow>
+               <asp:TableCell>
+                   <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter the CowId" ValidationGroup="vg" Text="*" ControlToValidate="txt_cowid" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                   <asp:TextBox ID="txt_cowid" runat="server" CssClass="textBox"></asp:TextBox><br /></asp:TableCell>
+               <asp:TableCell>
+                   <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter the milk quantity" SetFocusOnError="True" Text="*" ValidationGroup="vg" ControlToValidate="txt_milkquantity"></asp:RequiredFieldValidator>
+                   <asp:TextBox ID="txt_milkquantity" CssClass="textBox" runat="server" TextMode="Number"></asp:TextBox><br /></asp:TableCell>
+                <asp:TableCell>
+                    
+          <asp:DropDownList runat="server" ID="ddl_List">
+              <asp:ListItem Value="select" Text="select"></asp:ListItem>
+           <asp:ListItem Value="Morning" Text="Morning"></asp:ListItem>
+           <asp:ListItem Value="Afternoon" Text="Afternoon"></asp:ListItem>
+           <asp:ListItem Value="Evenning" Text="Evenning">Evenning</asp:ListItem>
        </asp:DropDownList>
+                </asp:TableCell>
+               </asp:TableRow>
+       
+       
+    </asp:Table>
+
 
    </div>
-        <asp:Button runat="server" ID="recordMilk" Text="Save" OnClick="recordMilk_Click"/>
-         <asp:GridView runat="server" ID="grid1"></asp:GridView>
+        <br /><br />
+        <asp:Button runat="server" ID="recordMilk" CssClass="button" Text="Save" OnClick="recordMilk_Click" ValidationGroup="vg"/>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="vg" />
+        <br /><br />
+        <asp:GridView runat="server" ID="grid1" HeaderStyle-BackColor="Black" HeaderStyle-ForeColor="White" CellSpacing="20"></asp:GridView>
         <footer>
     <p>&copy; 2025 Naiposha Farm. All rights reserved.</p>
   </footer>

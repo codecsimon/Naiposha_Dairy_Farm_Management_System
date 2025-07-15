@@ -10,20 +10,23 @@ using System.Data.SqlClient;
 namespace dairy
 {
     public partial class EmployeeReport : System.Web.UI.Page
-    {   SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pc\Desktop\emaule\New folder\dairy-farm\dairy\dairy\App_Data\DairyFarmNaiposha.mdf"";Integrated Security=True");
+    {
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pc\Desktop\emaule\New folder\dairy-farm\dairy\dairy\App_Data\DairyFarmNaiposha.mdf"";Integrated Security=True");
+
         public static int token = 0;
         //token that differentiantes function
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(conn.State == ConnectionState.Closed)
+            if (conn.State == ConnectionState.Closed)
             {
                 conn.Open();
+                Display_Data();
+
             }
-            else 
-            { 
+            else
+            {
                 conn.Close();
             }
-            Display_Data();
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)

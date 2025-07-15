@@ -79,34 +79,58 @@
     <form id="form1" runat="server">
   
     <div>
-        <asp:Label ID="Item_Name" runat="server" Text="Item_Name"></asp:Label>
-        <asp:TextBox ID="txt_name" runat="server"></asp:TextBox> <br />
+        <br /><br />
+        <asp:Table runat="server" GridLines="Both" BorderWidth="1" >
+            <asp:TableHeaderRow BackColor="Black" ForeColor="white">
+                <asp:TableHeaderCell Text="Item Name"></asp:TableHeaderCell>
+                <asp:TableHeaderCell Text="Supplier"></asp:TableHeaderCell>
+                <asp:TableHeaderCell Text="Quantity"></asp:TableHeaderCell>
+                <asp:TableHeaderCell Text="Cost_Per_Quantity"></asp:TableHeaderCell>
+            </asp:TableHeaderRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter the name of the item" ControlToValidate="txt_name" Display="Dynamic" Text="*" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txt_name" runat="server"></asp:TextBox> 
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter the name of the supplier" Display="Dynamic" ControlToValidate="txt_supplier" SetFocusOnError="True" ValidationGroup="vg" Text="*"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txt_supplier" runat="server"></asp:TextBox> 
+                </asp:TableCell>
 
-        <asp:Label ID="supplier" runat="server" Text="Supplier"></asp:Label>
-        <asp:TextBox ID="txt_supplier" runat="server"></asp:TextBox> <br />
+                <asp:TableCell>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enter the quantity of the item" SetFocusOnError="True" Text="*" ValidationGroup="vg" ControlToValidate="txt_quantity" Display="Dynamic"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txt_quantity" runat="server" TextMode="Number"></asp:TextBox> 
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please enter the cost per Item" ControlToValidate="txt_cost" Display="Dynamic" Text="*" ValidationGroup="vg" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txt_cost" runat="server" TextMode="Number"></asp:TextBox> <br />
+                </asp:TableCell>
+            </asp:TableRow>
 
-        <asp:Label ID="quantity" runat="server" Text="Quantity"></asp:Label>
-        <asp:TextBox ID="txt_quantity" runat="server" TextMode="Number"></asp:TextBox> <br />
-
-        <asp:Label ID="cost" runat="server" Text="Cost_Per_Quantity"></asp:Label>
-        <asp:TextBox ID="txt_cost" runat="server" TextMode="Number"></asp:TextBox> <br />
+        </asp:Table>
+        
+        
 
     </div>
+        <br />
+        <br />
     <div class="button-group">
-      <asp:Button Text="Save" runat="server" ID="btnSave" OnClick="btnSave_Click" />
-      <asp:Button Text="Edit" runat="server" ID="btnEdit" />
-      <asp:Button Text="Delete" runat="server" ID="btnDelete" />
-      <asp:Button Text="View Inventory" runat="server" ID="btnView"/>
-    </div>
 
+      <asp:Button Text="Save" runat="server" ID="btnSave" OnClick="btnSave_Click" ValidationGroup="vg" />
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="vg" ForeColor="Red" />
+      <asp:Button Text="View Inventory" runat="server" ID="btnView" OnClick="btnView_Click"/>
+    </div>
+<br /><br />
     <div class="search-bar">
       <input type="text" placeholder="Search inventory..." runat="server"/>
     </div>
-
+        <br /><br />
         <h3>Records</h3>
     <asp:GridView ID="gridView" runat="server"></asp:GridView>
- 
+ <hr />
+        <br />
 
+        <br />
   <footer>
     <p>&copy; 2025 Naiposha Farm. All rights reserved.</p>
   </footer>

@@ -76,5 +76,10 @@ namespace dairy
                 Page.Response.Write(ex.Message);
             }
         }
+
+        protected void btnView_Click(object sender, EventArgs e)
+        {
+            display_data();
+        }
     }
 }

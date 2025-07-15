@@ -113,12 +113,19 @@
                 <h2>Login</h2>
                 <form id="form1" runat="server">
                 
-                    <input type="text" placeholder="Email" required="required" id="fEmail" runat="server"/>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter your email!" ControlToValidate="fEmail" Text="*" ValidationGroup="vg"></asp:RequiredFieldValidator>
-                    <input type="password" placeholder="Password" required="required" id="fPassword" runat="server" /><br />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="fPassword"></asp:RequiredFieldValidator> 
-                    <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
-                 
+                    
+                    <input type="text" placeholder="Email"  id="fEmail" runat="server"/>
+                
+                    
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter your email!" ControlToValidate="fEmail" Text="*Enter your email" ValidationGroup="vg" SetFocusOnError="True" Display="Dynamic" Font-Italic="True" Font-Size="11pt" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="fEmail" Display="Dynamic" ErrorMessage="Enter a valid email" Font-Italic="True" Font-Size="11pt" ForeColor="Red" SetFocusOnError="True" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vg">*Enter a valid email</asp:RegularExpressionValidator>
+                    <br />
+                     <input type="password" placeholder="Password"  id="fPassword" runat="server" /><br />
+                   
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter the password" ControlToValidate="fPassword" ValidationGroup="vg" Text="*Please enter the password" Display="Dynamic" Font-Italic="True" Font-Size="11pt" ForeColor="Red"></asp:RequiredFieldValidator> 
+                     <br />
+                    <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" ValidationGroup="vg" />
             <div class="extra-links">
                 <a href="login.aspx">No Account! Register</a>
                 </div>

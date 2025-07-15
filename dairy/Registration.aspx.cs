@@ -38,6 +38,7 @@ namespace dairy
             fPhone.Text = "";
             fAddress.Text = "";
             fPassword.Text = "";
+            fCoPassword.Text = "";
             
 
         }
