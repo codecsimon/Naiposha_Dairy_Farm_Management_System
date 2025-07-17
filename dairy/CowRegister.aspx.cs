@@ -11,7 +11,7 @@ namespace dairy
 {
     public partial class CowRegister : System.Web.UI.Page
     {
-        SqlConnection conn= new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pc\Desktop\emaule\New folder\dairy-farm\dairy\dairy\App_Data\DairyFarmNaiposha.mdf"";Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-FIP0QVR;Initial Catalog=Naiposha_Farm;User ID=sa;Password=***********");
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -38,6 +38,7 @@ namespace dairy
                 cowRegister.setName(cName.Value.ToString());
                 cowRegister.setWeight(Convert.ToInt32(cWeight.Value));
                 cowRegister.setBreed(cName.Value.ToString());
+                cowRegister.setTag(cTag.Value.ToString());
                 cowRegister.setHeight(Convert.ToInt32(cHeights.Value));
                 if(conn.State==ConnectionState.Closed)
                 {
@@ -48,12 +49,12 @@ namespace dairy
                 conn.Close();
                 }
                 try {
-                SqlCommand cmd = new SqlCommand("insert into Cow values(@cowname,@weight,@breed,@height)", conn);
+                SqlCommand cmd = new SqlCommand("insert into Cow values(@cowname,@weight,@breed,@height,@tag)", conn);
                 cmd.Parameters.AddWithValue("@cowname", cowRegister.getName());
                  cmd.Parameters.AddWithValue("@weight", cowRegister.getWeight());
                  cmd.Parameters.AddWithValue("@breed", cowRegister.getBreed());
                  cmd.Parameters.AddWithValue("@height", cowRegister.getHeight());
-                
+                 cmd.Parameters.AddWithValue("@tag", cowRegister.getTag());
                 cmd.ExecuteNonQuery();
                 clear_data();
                 Page.Response.Write("Cow registered successfully");

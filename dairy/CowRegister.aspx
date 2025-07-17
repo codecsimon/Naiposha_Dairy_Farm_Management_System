@@ -123,6 +123,7 @@
             <h2>Cow Registration</h2>
     <form id="form1" runat="server">
          <input type="text" placeholder="Full Name" required="required" runat="server" id="cName"/>
+                <input type="text" placeholder="Tag" required="required" runat="server" id="cTag"/>
                 <input type="number" placeholder="Weight" required="required" runat="server" id="cWeight"/>
                 <input type="text" placeholder="Breed" required="required" runat="server" id="cBreed"/>
                 <input type="number" placeholder="Height" required="required" runat="server" id="cHeights"/>

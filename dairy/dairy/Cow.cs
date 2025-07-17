@@ -12,6 +12,8 @@ namespace dairy.dairy
         int Weight;
         int Height;
         string breed;
+        string Tag;
+
         public Cow()
         {
 
@@ -44,10 +46,19 @@ namespace dairy.dairy
         {
             return this.Weight;
         }
+        public string getTag()
+        {
+            return this.Tag;
+        }
         public void setId(int ID)
         {
             this.ID=ID;
         }
+        public void setTag(string Tag)
+        {
+            this.Tag = Tag;
+        }
+
         public void setName(string name)
         { 
             this.name = name;
