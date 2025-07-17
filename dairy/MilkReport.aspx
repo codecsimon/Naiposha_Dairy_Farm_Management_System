@@ -54,15 +54,7 @@
     .card p {
       color: #555;
     }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
+    
   </style>
 </head>
 <body>
@@ -79,9 +71,12 @@
     <h2>Milk Report</h2>
     <form id="form1" runat="server">
         <div>
-            <asp:TextBox ID="txt_search" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txt_search" runat="server" ToolTip="Search"></asp:TextBox>
             <asp:Button ID="btn_search" runat="server" Text="Search" OnClick="btn_search_Click"/>
-            <asp:GridView ID="grid_milk" runat="server"></asp:GridView>
+            <br /><br />
+            <asp:GridView ID="grid_milk" runat="server">
+                <HeaderStyle BackColor="Black" ForeColor="White"/>
+            </asp:GridView>
         </div>
         <div>
             <asp:Button ID="btn_add" runat="server" Text="Add" OnClick="btn_add_Click"/>

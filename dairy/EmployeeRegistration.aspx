@@ -65,6 +65,7 @@
     <header>
     <div class="logo">Naiposha Farm DFMS</div>
     <nav>
+    <a href="Index.aspx">Home</a>
       <a href="EmployeeLogin.aspx">Login</a>
       <a href="Contact us.aspx">Contact us</a>
       
@@ -102,7 +103,7 @@
             <asp:Label ID="Laddress" Text="Address" runat="server"></asp:Label><br />
             <asp:TextBox ID="Eaddress" runat="server" CssClass="textbox"></asp:TextBox>
                 <br />
-            <asp:RequiredFieldValidator ID="AddressFieldValidator" runat="server" ControlToValidate="Eaddress" ErrorMessage="Address is required!" ForeColor="Red" SetFocusOnError="True" ValidationGroup="vg">*</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="AddressFieldValidator" runat="server" ControlToValidate="Eaddress" ErrorMessage="Address is required!" ForeColor="Red" SetFocusOnError="True" ValidationGroup="vg">*Please enter your address</asp:RequiredFieldValidator>
             <br />
 
             <asp:Label ID="Lpassword" Text="Password" runat="server"></asp:Label><br />
@@ -121,6 +122,7 @@
             <asp:CompareValidator ID="ComparepassValidator" runat="server" ControlToCompare="Epassword" ControlToValidate="Econfirm" ErrorMessage="Password does not match!" ForeColor="Red" SetFocusOnError="True" ValidationGroup="vg" Font-Size="11pt">*Password does not match!</asp:CompareValidator>
             
                 </div>
+                
             
         </div> 
         

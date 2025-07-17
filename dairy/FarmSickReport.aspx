@@ -55,15 +55,7 @@
     .card p {
       color: #555;
     }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
+    
     </style>
 </head>
 <body>
@@ -86,10 +78,50 @@
         <h3>Notifications</h3>
         <input placeholder="search sick repoort by Cow id.." id="txt_search" runat="server"/>
         <asp:Button runat="server" ID="BTN_SICK" Text="Search" OnClick="BTN_SICK_Click" ></asp:Button>
-        <asp:GridView ID="animal" runat="server" ></asp:GridView>
+        <br /><br />
+        <asp:GridView ID="animal" runat="server" >
+            <HeaderStyle BackColor="Black" ForeColor="white"/>
+        </asp:GridView>
+        <br />
+        <asp:Button ID="BTNVIEW" runat="server" Text="View Resposes" OnClick="BTNVIEW_Click"/>
 
-        <asp:Button ID="BTNVIEW" runat="server" Text="View " OnClick="BTNVIEW_Click"/>
+        <h3> Response</h3>
+        <hr />
+        <asp:Table BorderStyle="Solid" GridLines="both" runat="server" ID="sickTable">
+             
+               <asp:TableHeaderRow ForeColor="White" BackColor="Brown">
+                   <asp:TableHeaderCell Text="Sick Cow Response"></asp:TableHeaderCell>
+               </asp:TableHeaderRow>
+               <asp:TableRow>
+                   <asp:TableHeaderCell Text="SickReportID"></asp:TableHeaderCell>
+                   <asp:TableCell> 
+                       <input type="text" id="txt_sickid" runat="server"/>
+                   </asp:TableCell>
+               </asp:TableRow>
+               <asp:TableRow Width="50">
+                   <asp:TableHeaderCell Text="ManagerID"></asp:TableHeaderCell>
+                   <asp:TableCell> 
+                       <input type="text" id="txt_managerid" runat="server"/>
+                   </asp:TableCell>
+               </asp:TableRow>
+               <asp:TableRow>
+                   
+                    <asp:TableHeaderCell Text="Response"></asp:TableHeaderCell>
+                   <asp:TableCell>
+                       <input type="text" id="txt_response" runat="server"/>
+                   </asp:TableCell>
+               </asp:TableRow>
+            </asp:Table>
+        <br />
+        
 
+        
+         <asp:Button ID="btn_response" runat="server" Text="Respond" OnClick="btn_response_Click"/><br />
+       <br />
+        <asp:GridView ID="responseGrid" runat="server" >
+            <HeaderStyle BackColor="Black" ForeColor="white"/>
+        </asp:GridView>
+        <br />
         <footer>
        <p>&copy; 2025 Naiposha Farm. All rights reserved.</p>
     </footer>

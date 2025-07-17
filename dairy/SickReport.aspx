@@ -54,15 +54,7 @@
     .card p {
       color: #555;
     }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
+   
         </style>
 </head>
 <body>
@@ -71,12 +63,12 @@
             <header>
         <div class="logo">Naiposha Farm DFMS</div>
         <nav>
-            <a href="Index.aspx">Home</a>
-            <a href="login.aspx">Login</a>
-            <a href="Registration.aspx">Register</a>
-            <a href="EmployeeRegistration.aspx">Employee Register</a>
-            <a href="EmployeeLogin.aspx">Employee Login</a>
-            <a href="ContactUs.aspx">Contact Us</a>
+            <a href="EmployeeDashBoard.aspx">DashBoard</a>
+            <a href="MilkRecord.aspx">Milk Record</a>
+            <a href="EmployeeFeedSchedule.aspx">Feeding Schedule</a>
+            <a href="SickReport.aspx">Sick Report</a>
+            <a href="EmployeeLogin.aspx">logout</a>
+            
         </nav>
     </header>
             <h2>Sick Report</h2>
@@ -115,6 +107,9 @@
             <asp:Button runat="server" ID="btn_save" Text="Save" OnClick="btn_save_Click"/>
             <br />
             <asp:GridView runat="server" ID="sick"></asp:GridView>
+            <h3>Sick Animal Feedback</h3>
+            <hr />
+            <asp:GridView ID="sickFeedback" runat="server"></asp:GridView>
         </div>
         <footer>
     <p>&copy; 2025 Naiposha Farm. All rights reserved.</p>

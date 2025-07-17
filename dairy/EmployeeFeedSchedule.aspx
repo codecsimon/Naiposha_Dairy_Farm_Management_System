@@ -80,7 +80,9 @@
         <div>
             <h3> Daily Feeding Schedule</h3>
 
-            <asp:GridView runat="server" ID="feed" OnSelectedIndexChanged="feed_SelectedIndexChanged" ></asp:GridView>
+            <asp:GridView runat="server" ID="feed" OnSelectedIndexChanged="feed_SelectedIndexChanged" >
+                <HeaderStyle BackColor="Black" ForeColor="white"/>
+            </asp:GridView>
         </div>
          <footer>
     <p>&copy; 2025 Naiposha Farm. All rights reserved.</p>

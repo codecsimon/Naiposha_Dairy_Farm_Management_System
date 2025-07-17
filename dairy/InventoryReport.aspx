@@ -74,7 +74,7 @@
             <asp:TextBox runat="server" ID="txt_search"></asp:TextBox>
             <asp:Button runat="server" ID="btnSearch" Text="Search" OnClick="btnSearch_Click"/>
             <asp:GridView runat="server" ID="gridInventory">
-                
+                <HeaderStyle BackColor="Black" ForeColor="white"/>
             </asp:GridView>
             <asp:Label ID="reportIn" Text="0" runat="server" ></asp:Label>
             <asp:GridView runat="server" ID="GridTotal">

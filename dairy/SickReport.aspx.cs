@@ -17,18 +17,40 @@ namespace dairy
         if(conn.State== ConnectionState.Closed)
             {
                 conn.Open();
+                DataTable dt = viewResponse();
+                sickFeedback.DataSource = dt;
+                sickFeedback.DataBind();
+
             }
             else
             {
                 conn.Close();
             }
         }
+        public DataTable viewResponse()
+        {
+            try
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Sick_animal_Response";
+                cmd.ExecuteNonQuery();
 
+                DataTable dt = new DataTable();
+                SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
+                sqlData.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                return new DataTable();
+            }
+
+        }
         protected void btn_save_Click(object sender, EventArgs e)
         {
             insertSickReport();
-            sick.DataSource = display_Data();
-            sick.DataBind();
+            
         }
         public void insertSickReport()
         {

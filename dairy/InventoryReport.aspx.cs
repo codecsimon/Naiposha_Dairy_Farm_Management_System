@@ -17,22 +17,13 @@ namespace dairy
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (conn.State == ConnectionState.Closed)
-            {
-                conn.Open();
-                DataTable table = inventory.viewInventory();
-                DataTable dt = inventory.viewTotal();
-                GridTotal.DataSource = dt;
-                GridTotal.DataBind();
-                gridInventory.DataSource = table;
-                gridInventory.DataBind();
-                Page.Response.Write(inventory.getResponse());
-            }
-            else
-            {
-                conn.Close();
-            }
+
+            DataTable table = inventory.viewInventory();
+
+            gridInventory.DataSource = table;
+            gridInventory.DataBind();
         }
+                
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
